@@ -35,43 +35,36 @@
 		<div class="bg text-center">
 			<h1 class="h1 title">IP Address Tracker</h1>
 			<div class="container input-group my-input">
-				<input class="form-control col-11" id="inputIP" placeholder="Search for any IP address or domain" />
-				<button class="btn btn-secondary col-1" type="button" id="btnFind">></button>
+				<input class="form-control" id="inputIP" placeholder="Search for any IP address or domain" />
+				<button class="btn btn-secondary" type="button" id="btnFind">></button>
 			</div>
 
 			<div>
 				<div class="container results">
-					<div class="row">
+					<div class="itemFlex">
 						<div class="col">
-							<h3>IP Address</h3>
-							<p id="ipResult">IP Result</p>
+							<p>IP Address</p>
+							<h3 id="ipResult">...</h3>
 						</div>
 						<div class="col">
-							<h3>Location</h3>
-							<p id="ipLocation">Location Result</p>
+							<p>Location</p>
+							<h3 id="ipLocation">...</h3>
 						</div>
 						<div class="col">
-							<h3>
-								Timezone ,UTC
-								<!-- add offset value dynamically using the API -->
-							</h3>
-							<p id="ipTimeZone">Timezone Result</p>
+							<p>Timezone</p>
+							<h3 id="ipTimeZone">...</h3>
 						</div>
 						<div class="col">
-							<h3>ISP</h3>
-							<p id="ipISP">ISP Result</p>
+							<p>ISP</p>
+							<h3 id="ipISP">...</h3>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="map">
-			<div>
-				<map></map>
-			</div>
-		</div>
+		<div id="map"></div>
 	</body>
-	<footer>
-		<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+	<footer class="footer">
+		<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/Cashmay0r/IPFinder">Aidan Enseleit</a>.</div>
 	</footer>
 </html>

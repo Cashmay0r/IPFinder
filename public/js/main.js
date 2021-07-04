@@ -11,11 +11,10 @@ function getIPDetails() {
 	let ipLocation = document.getElementById('ipLocation');
 	let ipTimeZone = document.getElementById('ipTimeZone');
 	let ipISP = document.getElementById('ipISP');
-	let ipCoordinates = {};
-	const inputIP = '';
+	const inputIP = '8.8.8.8';
 	const ip = document.getElementById('inputIP').value;
 	const apiKey = 'at_DcAiANrwr6NYePGOqSpqk4Q676Lg6';
-	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
+	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${inputIP}`)
 		.then((result) => {
 			return result
 				.json()
@@ -23,13 +22,12 @@ function getIPDetails() {
 					console.log(obj);
 					ipResult.innerHTML = obj.ip;
 					ipLocation.innerHTML = obj.location.city;
-					ipTimeZone.innerHTML = obj.location.timezone;
+					ipTimeZone.innerHTML = 'UTC ' + obj.location.timezone;
 					ipISP.innerHTML = obj.isp;
-					ipCoordinates = {
+					let ipCoordinates = {
 						lat: obj.location.lat,
 						lng: obj.location.lng,
 					};
-					console.log(ipCoordinates);
 					addMarker(ipCoordinates);
 				})
 				.catch((err) => {
