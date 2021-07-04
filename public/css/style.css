@@ -1,0 +1,62 @@
+body,
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Rubik', sans-serif;
+}
+
+.bg {
+	background-image: url('../images/pattern-bg.png');
+	height: 15vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+	margin: 0;
+	padding: 10px;
+	padding-top: 30px;
+}
+.my-input {
+	width: 25%;
+	max-width: 25%;
+	padding: auto;
+}
+.title {
+	color: white;
+}
+.form-control {
+	border-radius: 10px;
+}
+.btn {
+	background-color: black;
+	border-radius: 10px;
+}
+.results {
+	margin-top: 30px;
+	background-color: whitesmoke;
+	border: 1px solid black;
+	width: 80%;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+}
+.my-input {
+	width: auto;
+	max-width: 400px;
+	padding: auto;
+}
+#map {
+	height: 75vh;
+
+	z-index: 0;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 375px) {
+	.my-input {
+		width: auto;
+		max-width: 400px;
+		padding: auto;
+	}
+}

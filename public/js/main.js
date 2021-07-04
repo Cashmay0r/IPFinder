@@ -12,7 +12,7 @@ function getIPDetails() {
 	let ipTimeZone = document.getElementById('ipTimeZone');
 	let ipISP = document.getElementById('ipISP');
 	let ipCoordinates = {};
-	const inputIP = '161.8.247.232';
+	const inputIP = '';
 	const ip = document.getElementById('inputIP').value;
 	const apiKey = 'at_DcAiANrwr6NYePGOqSpqk4Q676Lg6';
 	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
@@ -30,6 +30,7 @@ function getIPDetails() {
 						lng: obj.location.lng,
 					};
 					console.log(ipCoordinates);
+					addMarker(ipCoordinates);
 				})
 				.catch((err) => {
 					console.log(err);
