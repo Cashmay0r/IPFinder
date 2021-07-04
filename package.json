@@ -5,12 +5,16 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon index.js"
+		"start": "nodemon index.js",
+		"build": "parcel build index.js"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1",
 		"nodemon": "^2.0.9"
+	},
+	"devDependencies": {
+		"parcel-bundler": "^1.12.5"
 	}
 }
