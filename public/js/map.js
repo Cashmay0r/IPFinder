@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	loadMap();
 });
 let mymap;
+let marker;
+const defaultView = [-24.797, 133.940];
 function loadMap() {
-	mymap = L.map('map',{zoomControl: false}).setView([-24.797, 133.940], 3);
+	mymap = L.map('map',{zoomControl: false}).setView(defaultView, 3);
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		maxZoom: 18,
@@ -15,7 +17,12 @@ function loadMap() {
 }
 
 function addMarker(location) {
-	let marker = L.marker(location).addTo(mymap);
+	marker = L.marker(location).addTo(mymap);
 
 	mymap.setView(location, 7);
+}
+function removeMarker(){
+mymap.removeLayer(marker);
+mymap.setView(defaultView, 3)
+
 }

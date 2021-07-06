@@ -33,6 +33,11 @@ function getIPDetails() {
 					addMarker(ipCoordinates);
 				})
 				.catch((err) => {
+					ipResult.innerHTML = '...';
+					ipLocation.innerHTML ='...';
+					ipTimeZone.innerHTML = '...';
+					ipISP.innerHTML = '...';
+					removeMarker();
 					
 					alert(`Unable to parse ${result} to JSON`);
 					
