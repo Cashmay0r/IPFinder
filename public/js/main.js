@@ -11,10 +11,10 @@ function getIPDetails() {
 	let ipLocation = document.getElementById('ipLocation');
 	let ipTimeZone = document.getElementById('ipTimeZone');
 	let ipISP = document.getElementById('ipISP');
-	const inputIP = '8.8.8.8';
+	//const inputIP = '8.8.8.8';
 	const ip = document.getElementById('inputIP').value;
 	const apiKey = 'at_DcAiANrwr6NYePGOqSpqk4Q676Lg6';
-	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${inputIP}`)
+	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
 		.then((result) => {
 			return result
 				.json()
