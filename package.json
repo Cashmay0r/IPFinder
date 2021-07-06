@@ -6,7 +6,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon index.js",
-		"build": "parcel build index.js"
+		"build": "parcel build index.js",
+		"dev": "parcel index.js"
 	},
 	"author": "",
 	"license": "ISC",
