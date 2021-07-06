@@ -16,6 +16,7 @@ function getIPDetails() {
 	const apiKey = 'at_DcAiANrwr6NYePGOqSpqk4Q676Lg6';
 	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
 		.then((result) => {
+			console.log(ip);
 			return result
 				.json()
 				.then((obj) => {

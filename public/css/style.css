@@ -1,110 +1,129 @@
 * {
-	font-family: 'Rubik', sans-serif;
-	font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
 }
 body,
 html {
-	height: 100%;
-	padding: 0;
-	margin: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .bg {
-	background-image: url('../images/pattern-bg.png');
-	height: 15vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-image: url("../images/pattern-bg.png");
+  height: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
-	margin: 0;
-	padding: 10px;
-	padding-top: 30px;
+  margin: 0;
+  padding: 10px;
+  padding-top: 30px;
 }
 h3 {
-	margin: 0;
-	padding: 5px;
-	font-size: large;
-	font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 5px;
+  font-size: large;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 p {
-	margin: 0;
-	padding: 5px;
-	font-size: small;
-	font-family: 'Rubik', sans-serif;
-}
-
-.my-input {
-	width: 25%;
-	max-width: 25%;
-	padding: auto;
+  margin: 0;
+  padding: 5px;
+  font-size: x-small;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  color: gray;
+  opacity: 70%;
 }
 .title {
-	color: white;
+  color: white;
+  font-size: xx-large;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
 }
 .form-control {
-	border-radius: 10px;
+  border-radius: 10px;
 }
 .btn {
-	background-color: hsl(0, 0%, 17%);
-	border-radius: 10px;
-	width: 50px;
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 10px;
+  width: 50px;
+}
+.btn:hover {
+  background-color: hsl(0, 0%, 59%);
 }
 .results {
-	margin-top: 30px;
-	background-color: white;
-	width: 80%;
-	border-radius: 10px;
-	position: relative;
-	z-index: 1;
-	height: 12vh;
+  margin-top: 3.5vh;
+  background-color: white;
+  width: 80%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  height: 12vh;
 }
 .my-input {
-	width: auto;
-	max-width: 500px;
-	padding: auto;
-	position: relative;
-	height: 50px;
+  width: auto;
+  max-width: 550px;
+  padding: auto;
+  position: relative;
+  height: 50px;
 }
 #map {
-	height: 80vh;
-	z-index: 0;
+  height: 78vh;
+  z-index: 0;
 }
 .itemFlex {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .col {
-	border-right: 1.5px solid rgba(191, 191, 191, 0.5);
+  border-right: 1px solid rgba(191, 191, 191, 0.5);
+  border-left: 1px solid rgba(191, 191, 191, 0.5);
 }
 .footer {
-	height: auto;
+  height: auto;
 }
 .container {
-	padding: 0;
+  padding: 0;
+}
+::placeholder {
+  font-size: medium;
 }
 /* Extra small devices (phones, 375px and down) */
-@media only screen and (max-width: 375px) {
-	.my-input {
-		width: auto;
-		max-width: 350px;
-		padding: auto;
-	}
-	.itemFlex {
-		flex-direction: column;
-	}
-	.bg {
-		height: 30vh;
-	}
-	#map {
-		height: 70vh;
-	}
-	.results {
-		height: auto;
-	}
+@media only screen and (max-width: 600px) {
+  .my-input {
+    width: auto;
+    max-width: 90vw;
+    padding: auto;
+    font-size: large;
+  }
+  .itemFlex {
+    flex-direction: column;
+  }
+  .bg {
+    height: 30vh;
+  }
+  #map {
+    height: 70vh;
+  }
+  .results {
+    height: auto;
+    margin-top: 2vh;
+  }
+  .col {
+    border: 0;
+  }
+  .title {
+    font-size: larger;
+  }
+  ::placeholder {
+    font-size: small;
+  }
 }
 @media only screen and (min-width: 600px) {
 }

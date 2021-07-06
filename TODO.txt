@@ -1,0 +1,4 @@
+-Button colour change based on hover state
+-Trim user input
+-Error check user input
+-Alerts for errorrs when they occur with appropriate error messages
