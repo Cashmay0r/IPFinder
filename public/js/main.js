@@ -14,6 +14,7 @@ function getIPDetails() {
 	//const inputIP = '8.8.8.8';
 	const ip = document.getElementById('inputIP').value;
 	const apiKey = 'at_DcAiANrwr6NYePGOqSpqk4Q676Lg6';
+	if (ip.trim() != ''){
 	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
 		.then((result) => {
 			console.log(ip);
@@ -33,9 +34,15 @@ function getIPDetails() {
 				})
 				.catch((err) => {
 					console.log(err);
+					alert(`Unable to parse ${result} to JSON`);
+					
 				});
 		})
 		.catch((err) => {
 			console.log(err);
+			alert(`No Result was found for ${ip}`);
 		});
+	}else{
+		alert('Input not valid, please try again.')
+	};
 }
