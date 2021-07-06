@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/public/html/index.html');
+	res.sendFile(__dirname + 'index.html');
 });
 app.listen(port, () => {
 	console.log(`Server Listening at http://localhost:${port}`);
