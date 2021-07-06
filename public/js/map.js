@@ -15,7 +15,6 @@ function loadMap() {
 }
 
 function addMarker(location) {
-	console.log(location);
 	let marker = L.marker(location).addTo(mymap);
 
 	mymap.setView(location, 7);

@@ -17,11 +17,11 @@ function getIPDetails() {
 	if (ip.trim() != ''){
 	fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`)
 		.then((result) => {
-			console.log(ip);
+			
 			return result
 				.json()
 				.then((obj) => {
-					console.log(obj);
+					
 					ipResult.innerHTML = obj.ip;
 					ipLocation.innerHTML = obj.location.city;
 					ipTimeZone.innerHTML = 'UTC ' + obj.location.timezone;
@@ -33,13 +33,13 @@ function getIPDetails() {
 					addMarker(ipCoordinates);
 				})
 				.catch((err) => {
-					console.log(err);
+					
 					alert(`Unable to parse ${result} to JSON`);
 					
 				});
 		})
 		.catch((err) => {
-			console.log(err);
+			
 			alert(`No Result was found for ${ip}`);
 		});
 	}else{
